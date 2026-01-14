@@ -6,7 +6,7 @@ Está diseñado para poder añadir hasta 10 pasos, pero debería ser sencillo mo
 
 ## Ejemplos de la interfaz
 
-(./1.png)
+[./1.png]
 
 ### Diferentes temas
 
@@ -21,13 +21,13 @@ Se adjuntan 9 paletas diferentes:
   * Oscuro
   * Nocturno
 
-(./2.png)
+[./2.png]
 
 Para modificar las paletas simplemente se modifica el fichero `codigo.js` y se cambian las clases de Tailwind.CSS utilizadas.
 
 El primer color es el color de fondo de los pasos, el segundo el color del texto de cada paso, el tercero es el color de fondo del roadmap. Los colores restantes son los que se usan para definir la _carretera_.
 
-(./4.png)
+[./4.png]
 
 ```
 const paletas = {
@@ -52,10 +52,11 @@ const paletas = {
 ```
 
 
-## Esportación sencilla
+## Exportación sencilla
 
 Basta pulsar el botón de _Ver código_ para que se nos muestre el código del _roadmap_.
-(./3.png)
+
+[./3.png]
 
 # Cómo arrancar el proyecto
 
