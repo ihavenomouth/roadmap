@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap</title>
+    <link rel="stylesheet" href="./output.css">
+    <script defer src="codigo.js"></script>
+  </head>
+  <body class="w-screen h-screen p-4 bg-neutral-100">
+    <h1 class="m-4 text-4xl">Roadmap</h1>
+
+    
+    <form id="frm" class="mb-8 max-w-[35rem]">
+      <fieldset class="grid items-center grid-cols-3 gap-4 p-4 border-2 rounded border-neutral-400">
+        <legend class="px-4 text-sm">Selecciona las opciones</legend>
+        
+        <label class="block text-right" for="txtPasos">Número de pasos</label>
+        <input class="col-span-2 p-2 border-2 rounded" type="number" id="txtPasos" name="txtPasos" min="1" max="10" value="1" />
+        
+        <label class="block text-right" for="txtPaleta">Paleta de colores</label>
+        <select class="col-span-2 p-2 border-2 rounded" id="txtPaleta" name="txtPaleta">
+          <option value="70s" selected>Años 70</option>
+          <option value="ocean">Ocean</option>
+          <option value="betis">Real Betis</option>
+          <option value="pastel">Pastel</option>
+          <option value="rojo">Rojo</option>
+          <option value="cielo">Cielo</option>
+          <option value="vibrante">Vibrante</option>
+          <option value="oscuro">Oscuro</option>
+          <option value="nocturno">Nocturno</option>
+        </select>
+
+        <label class="block text-right" for="txtTitulo">Título</label>
+        <input class="col-span-2 p-2 border-2 rounded" type="text" id="txtTitulo" name="txtTitulo" value="ROADMAP" />
+      </fieldset>
+
+
+      <fieldset id="fieldPasos" class="grid items-center grid-cols-3 gap-4 p-4 mt-4 border-2 rounded border-neutral-400">
+      </fieldset>
+
+      <div class="mt-4 flex gap-4">
+        <button type="button" id="btnGenerar" class="p-2 text-white bg-red-500 rounded min-w-36">Generar</button>
+        <button type="button" id="btnVerCodigo" class="p-2 text-white bg-blue-500 rounded min-w-36">Ver código</button>
+      </div>
+
+    </form>
+
+
+    <div class="bg-white">
+      <article class="grid h-[50rem] grid-rows-9 grid-cols-12 relative">
+
+        <div class="col-span-2 col-start-1 row-span-1 row-start-4 bg-red-500"></div>
+        <div class="grid items-center col-span-2 col-start-1 row-span-6 row-start-5 text-center bg-neutral-200">Primer paso</div>
+
+
+        <div class="grid items-center col-span-2 col-start-3 row-span-3 row-start-1 text-center bg-neutral-200">Segundo paso</div>
+        <div class="col-span-1 col-start-4 row-span-1 row-start-4 bg-neutral-200"></div>
+
+
+        <div class="col-span-1 col-start-3 row-span-1 row-start-4 bg-yellow-500"></div>
+        <div class="col-span-1 col-start-4 row-span-4 row-start-4 bg-yellow-500 rounded-bl-3xl rounded-tr-3xl"></div>
+
+
+        <div class="col-span-2 col-start-5 row-span-1 row-start-7 bg-slate-600"></div>
+        <div class="grid items-center col-span-2 col-start-5 row-span-2 text-center row-start-8 bg-neutral-200">Tercer paso</div>
+
+        <div class="grid items-center col-span-2 col-start-7 row-span-4 row-start-1 text-center bg-neutral-200">Cuarto paso</div>
+                  <div class="col-span-2 col-start-7 row-span-3 row-start-5 bg-neutral-200"></div>
+        <div class="col-span-1 col-start-7 row-span-1 row-start-7 bg-red-500"></div>
+        <div class="col-span-1 col-start-8 row-span-3 row-start-5 bg-red-500 rounded-br-3xl rounded-tl-3xl"></div>
+
+
+        <div class="col-span-2 col-start-9 row-span-1 row-start-5 bg-yellow-500"></div>
+        <div class="grid items-center col-span-2 col-start-9 row-span-4 row-start-6 text-center bg-neutral-200">Quinto paso</div>
+
+
+        <div class="grid items-center col-span-2 col-start-11 row-start-1 text-center row-span-7 bg-neutral-200">Sexto paso</div>
+        <div class="col-span-1 col-start-11 row-span-4 row-start-5 rounded-bl-3xl rounded-tr-3xl bg-slate-600"></div>
+        <div class="col-span-1 col-start-12 row-span-1 row-start-8 bg-slate-600"></div>
+
+
+        <div class="grid items-center col-span-7 col-start-7 row-span-1 row-start-1 font-bold text-center text-8xl">ROADMAP</div>
+      </article>
+    </div>
+
+    <dialog id="dlgCodigo" class="p-4 rounded border-2 border-neutral-400 w-3/4 h-3/4 backdrop:bg-black/50">
+      <div class="flex flex-col h-full gap-4">
+        <h3 class="text-xl font-bold">Código HTML</h3>
+        <textarea id="txtCodigo" class="flex-1 p-2 font-mono text-sm border-2 rounded resize-none bg-neutral-100" readonly></textarea>
+        <div class="flex justify-end">
+          <button id="btnCerrarDialog" class="p-2 text-white bg-neutral-600 rounded">Cerrar</button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
